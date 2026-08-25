@@ -12,10 +12,13 @@ body {
   --border-panel: #e6e6e6;
   --border-input: #eceaea;
   --placeholder-color: #a5a4a4;
+  --text-collor: #000;
+  --focus-color: #a1a1a1;
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   background-color: var(--background);
+  user-select: none;
 }
 
 img {
@@ -29,12 +32,15 @@ a {
 
 .wrapper {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
   margin-inline: auto;
   width: 800px;
-  min-height: 100%;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -42,7 +48,7 @@ a {
 
 .column {
   flex: 1;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .left {
@@ -82,6 +88,12 @@ input[type="password"] {
   font-size: 13px;
 }
 
+input[type="text"]:focus,
+input[type="password"]:focus{
+  outline: none;
+  border-color: var(--focus-color);
+}
+
 input[type="submit"] {
   padding: 6px;
   border: 0;
@@ -108,4 +120,40 @@ input::placeholder{
 
 .infobox a{
   user-select: none;
+}
+
+footer{
+  width: 95%;
+  text-align: center;
+}
+
+.footer-inner a{
+  text-transform: uppercase;
+  color: var(--text-collor);
+  font-weight: bold;
+  font-size: 12px;
+  margin-right: 2%;
+}
+
+.text-small{
+  display: inline-block;
+  color: #808080;
+  font-size: 12px;
+}
+
+.apps-downloads{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.apps{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.apps img{
+  width: 135px;
+  cursor: pointer;
 }

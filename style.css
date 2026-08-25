@@ -13,6 +13,7 @@ body {
   --border-input: #eceaea;
   --placeholder-color: #a5a4a4;
   --text-collor: #000;
+  --text-secondary: #808080;
   --focus-color: #a1a1a1;
 
   font-family: Arial, Helvetica, sans-serif;
@@ -31,6 +32,7 @@ a {
 }
 
 .wrapper {
+  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -39,11 +41,11 @@ a {
 }
 
 .container {
-  margin-inline: auto;
+  margin: auto;
   width: 800px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .column {
@@ -53,10 +55,10 @@ a {
 
 .left {
   background-image: url(assets/main-foto.png);
-  background-size: 380px;
+  background-size: 350px;
   background-position: center;
   background-repeat: no-repeat;
-  height: 500px;
+  height: 470px;
 }
 
 .login-panel {
@@ -89,7 +91,7 @@ input[type="password"] {
 }
 
 input[type="text"]:focus,
-input[type="password"]:focus{
+input[type="password"]:focus {
   outline: none;
   border-color: var(--focus-color);
 }
@@ -104,11 +106,11 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-input::placeholder{
+input::placeholder {
   color: var(--placeholder-color);
 }
 
-.infobox{
+.infobox {
   background-color: var(--background-secondary);
   border: 1px solid var(--border-panel);
   height: 50px;
@@ -118,16 +120,13 @@ input::placeholder{
   align-items: center;
 }
 
-.infobox a{
-  user-select: none;
-}
-
-footer{
-  width: 95%;
+footer {
+  width: 90%;
   text-align: center;
+  margin-bottom: 60px;
 }
 
-.footer-inner a{
+.footer-inner a {
   text-transform: uppercase;
   color: var(--text-collor);
   font-weight: bold;
@@ -135,25 +134,79 @@ footer{
   margin-right: 2%;
 }
 
-.text-small{
+.text-small {
   display: inline-block;
-  color: #808080;
+  color: var(--text-secondary);
   font-size: 12px;
 }
 
-.apps-downloads{
+.apps-downloads {
   text-align: center;
   margin-top: 20px;
 }
 
-.apps{
+.apps {
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-top: 10px;
 }
 
-.apps img{
+.apps img {
   width: 135px;
   cursor: pointer;
+}
+
+.container-signup {
+  width: 450px;
+  margin: auto;
+}
+
+.message {
+  width: 65%;
+  margin-inline: auto;
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 20px;
+  margin-block: 10px;
+}
+
+.cta-button {
+  width: 100%;
+  height: 40px;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  border: 0;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+@media(max-width: 805px) {
+  .container {
+    width: 100%;
+  }
+
+  .container-signup {
+    width: 100%;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .login-panel,
+  .infobox {
+    margin-inline: auto;
+    width: 70%;
+    padding-inline: 10px;
+  }
+}
+
+@media(max-width: 596px) {
+
+  .login-panel,
+  .infobox {
+    width: 90%;
+  }
 }

@@ -25,7 +25,8 @@ A interface contém:
 * 🔗 Links complementares no rodapé
 
 A versão publicada apresenta a estrutura visual da página de login.
-![Tela Desktop]
+![Tela Desktop](assets/tela-desktop.png)
+![Tela Mobile](assets/tela-mobile.png)
 
 ## 🛠️ Tecnologias utilizadas
 

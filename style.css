@@ -6,11 +6,20 @@
 
 body {
   --background: #fafafa;
+  --background-secondary: #ffffff;
   --color-primary: #3c96ed;
+  --color-secondary: #ffffff;
+  --border-panel: #e6e6e6;
+  --border-input: #eceaea;
+  --placeholder-color: #a5a4a4;
 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   background-color: var(--background);
+}
+
+img {
+  width: 100%;
 }
 
 a {
@@ -31,16 +40,72 @@ a {
   gap: 20px;
 }
 
-.column{
+.column {
   flex: 1;
-  width: 50%;
+  margin-bottom: 50px;
 }
 
-.left{
+.left {
   background-image: url(assets/main-foto.png);
-  background-size: 450px;
+  background-size: 380px;
   background-position: center;
   background-repeat: no-repeat;
-  height: 600px;
-  margin-bottom: 50px;
+  height: 500px;
+}
+
+.login-panel {
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border-panel);
+  border-radius: 4px;
+  padding: 20px 40px;
+  text-align: center;
+}
+
+.logo {
+  margin-inline: auto;
+  width: 70%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-block: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  border: 1px solid var(--border-input);
+  background-color: var(--background-secondary);
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+input[type="submit"] {
+  padding: 6px;
+  border: 0;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input::placeholder{
+  color: var(--placeholder-color);
+}
+
+.infobox{
+  background-color: var(--background-secondary);
+  border: 1px solid var(--border-panel);
+  height: 50px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infobox a{
+  user-select: none;
 }
